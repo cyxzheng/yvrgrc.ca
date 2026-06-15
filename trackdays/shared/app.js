@@ -1,291 +1,3 @@
-// Edit the content in this object to update the page.
-// Keep event details centralized here instead of in the HTML.
-const participantCode = "0313";
-
-const eventContent = {
-  brandTitle: "YVR GRC Track Days",
-  title: "Vancouver GR Corolla Club Track Day 2026",
-  participantCode,
-  groupColors: {
-    a: "#A4CD2F",
-    b: "#00ABF0",
-    c: "#F57F04"
-  },
-  overviewImage: {
-    src: "assets/images/cover.gif",
-    alt: "Track day event cover image"
-  },
-  overviewAudio: {
-    src: "",
-    buttonLabels: {
-      muted: "Unmute",
-      playing: "Mute"
-    },
-    loop: true,
-    initialVolume: 0.8
-  },
-  date: "March 13, 2026",
-  time: "12:15 PM - 4:00 PM",
-  locationName: "Mission Raceway Park",
-  address: "32670 Dyke Rd, Mission, BC V2V 4J5",
-  locationUrl: "https://maps.google.com/?q=32670+Dyke+Rd,+Mission,+BC+V2V+4J5",
-  summary: "The first ever Vancouver GR Corolla Club track day, in partnership with Toyota Canada and OpenRoad Auto Group.",
-  trackInfo: {
-    tabs: [
-      {
-        id: "getting-there",
-        label: "Getting There",
-        title: "Arrival Instructions",
-        featureCard: {
-          eyebrow: "Gate Code",
-          value: participantCode
-        },
-        description:
-          "Upon entering the gate, turn RIGHT towards the paddock, and park in the area highlighted on the map for tech inspection.",
-        media: {
-          title: "Gate and paddock route",
-          imageSrc: "assets/images/gettingthere.png",
-          meta: "Opens a zoomable PDF in a new tab",
-          pdfUrl: "assets/docs/gettingthere.pdf",
-          pdfLabel: "Open getting-there PDF"
-        },
-        infoBox: {
-          title: "Important!",
-          items: [
-            {
-              title: "What Time Do I Need To Arrive?",
-              body:
-                "Arrive on time, so that you have ample time to complete registration, tech inspection, and attend the driver's meeting."
-            },
-            {
-              title: "What happens if I miss the driver's meeting?",
-              body:
-                "Attending the driver's meeting is mandatory. If you miss the driver's meeting, you will not be driving on track."
-            }
-          ]
-        }
-      },
-      {
-        id: "track-layout",
-        label: "Track Layout",
-        title: "Passing Zones and Education",
-        description:
-          "Passing is only allowed via point-bys, otherwise assume the car in front doesn't see you. Familiarize yourself with your group's passing zones.",
-        infoBox: {
-          title: "Track Layout Change",
-          items: [
-            {
-              body:
-                "Due to repaving, the track layout has changed to a shorter circuit. Please follow the marked red track on the map."
-            },
-          ]
-        },
-        media: {
-          title: "Mission Raceway track layout",
-          imageSrc: "assets/images/passingzones.png",
-          meta: "Opens a zoomable PDF in a new tab",
-          pdfUrl: "assets/docs/passingzones.pdf",
-          pdfLabel: "Open track-layout PDF"
-        },
-        videos: [
-          {
-            youtubeId: "https://www.youtube.com/watch?v=KenIYlB2kvo",
-            title: "Nathan Tong Onboard",
-            caption: "Study Nathan sending it."
-          },
-          {
-            title: "Instructor Demo Lap",
-            youtubeId: "https://www.youtube.com/watch?v=VS9ga1GbPjI",
-            caption: "Corner by corner guide."
-          },
-          {
-            title: "Ross Dunnet Onboard",
-            youtubeId: "https://www.youtube.com/watch?v=nJh48rrQEb4",
-            caption: "Study Ross sending it."
-          }
-        ]
-      },
-      {
-        id: "flags",
-        label: "Flags",
-        title: "Flags",
-        description:
-          "For educational purposes only! Official flagging procedures will be explained at the Driver's Meeting.",
-        flags: [
-          {
-            name: "Green",
-            description: "Track is clear. Resume normal lapping pace.",
-            imageSrc: "assets/images/flags/green.png"
-          },
-          {
-            name: "Yellow",
-            description: "Caution. No passing.",
-            imageSrc: "assets/images/flags/yellow.png"
-          },
-          {
-            name: "Red",
-            description: "Session stopped. Slow down and come to a stop at the next worker station until next instruction (front straight, T3, or T6)",
-            imageSrc: "assets/images/flags/red.png"
-          },
-          {
-            name: "Black (Waving)",
-            description: "All cars slow down, come into hot pits and see a crew member/steward/staff.",
-            imageSrc: "assets/images/flags/wavingblack.png"
-          },
-          {
-            name: "Black (Furled/pointed)",
-            description: "You have been flagged. Come into the hot pits and speak to staff.",
-            imageSrc: "assets/images/flags/black.png"
-          },
-          {
-            name: "Blue",
-            description: "There is a faster car behind AND you've been holding them up for 3 corners. Give point-by at next safe opportunity.",
-            imageSrc: "assets/images/flags/passing.png"
-          },
-          {
-            name: "Checkered",
-            description: "Cool down lap and return to parking (Mission specific: enter parking at the end of hot pits, do not enter at beginning of pit)",
-            imageSrc: "assets/images/flags/checkered.png"
-          }
-        ]
-      }
-    ]
-  },
-  schedule: [
-    { time: "12:15 PM", title: "Gates Open to Participants", description: `Gate code is ${participantCode}` },
-    { time: "12:20 PM", title: "Registration and Tech Inspection" },
-    { time: "12:45 PM", title: "Driver's Meeting" },
-    { type: "marker", time: "1:00 PM", title: "Track Hot" },
-    { time: "1:00 PM", title: "Group A Running", description: "1:00 PM - 1:15 PM", group: "a" },
-    { time: "1:15 PM", title: "Group B Running", description: "1:15 PM - 1:30 PM", group: "b" },
-    { time: "1:30 PM", title: "Group C Running", description: "1:30 PM - 1:45 PM", group: "c" },
-    { time: "1:45 PM", title: "Group A Running", description: "1:45 PM - 2:00 PM", group: "a" },
-    { time: "2:00 PM", title: "Group B Running", description: "2:00 PM - 2:15 PM", group: "b" },
-    { time: "2:15 PM", title: "Group C Running", description: "2:15 PM - 2:30 PM", group: "c" },
-    { time: "2:30 PM", title: "Group A Running", description: "2:30 PM - 2:45 PM", group: "a" },
-    { time: "2:45 PM", title: "Group B Running", description: "2:45 PM - 3:00 PM", group: "b" },
-    { time: "3:00 PM", title: "Group C Running", description: "3:00 PM - 3:15 PM", group: "c" },
-    { time: "3:15 PM", title: "Group A Running", description: "3:15 PM - 3:30 PM", group: "a" },
-    { time: "3:30 PM", title: "Group B Running", description: "3:30 PM - 3:45 PM", group: "b" },
-    { time: "3:45 PM", title: "Group C Running", description: "3:45 PM - 4:00 PM", group: "c" },
-    { type: "marker", time: "4:00 PM", title: "Track Cold" }
-  ],
-  requiredItems: [
-    "Snell 2010 or newer helmet",
-    "Driver's License",
-    "Signed online waiver",
-    "Full tank of gas"
-  ],
-  recommendedItems: [
-    "Water",
-    "Tire pressure gauge",
-    "Tire pump",
-    "Snacks",
-    "Folding chair",
-    "Basic tools"
-  ],
-  faqItems: [
-    {
-      question: "How should I pace my laps?",
-      answer:
-        "Do one or two hot laps, then take a cooldown lap to manage heat in the car, tires, and brakes."
-    },
-    {
-      question: "What if I feel overwhelmed on track?",
-      answer:
-        "Back off the pace, give point-bys when possible. This is not a race! Predictable driving matters more than speed."
-    },
-    {
-      question: "What should I do after completing a session?",
-      answer:
-        "Make your way to the paddock, and let your engine run for a few minutes. DO NOT PULL THE HANDBRAKE."
-    },
-    {
-      question: "Should I change tire pressures during the day?",
-      answer:
-        "Yes. Check pressures after sessions and adjust as needed, since repeated hot laps can raise them quickly."
-    }
-  ],
-  groups: [
-    {
-      name: "Group A",
-      group: "a",
-      level: "Advanced",
-      people: [
-        "Naohiko Saito / Masahiro Sasaki",
-        "Ross Dunnet",
-        "Nathan Tong",
-        "Colin Yu",
-        "Marc Brito",
-        "Jessie Pashak",
-        "Jason Leung",
-        "Alan Cham",
-        "Jeremy McLean"
-      ]
-    },
-    {
-      name: "Group B",
-      group: "b",
-      level: "Intermediate",
-      people: [
-        "Jack Wong",
-        "Eugene Liew",
-        "Jason Lai",
-        "Justin Ng",
-        "Don Yip",
-        "Brian Wong",
-        "Erik Soderlund",
-        "Steve Lloyd",
-        "Luka Petrovic"
-      ]
-    },
-    {
-      name: "Group C",
-      group: "c",
-      level: "Novice",
-      people: [
-        "Vic Quintoro",
-        "Calvin Zheng",
-        "Gabi Chen",
-        // "Caymin Hansson",
-        "Hanson Ng",
-        "Leo Yang",
-        "Tim Tseng",
-        "Danny Luk",
-        // "Ian Wong",
-        "Michael Chan",
-        "Landon Folz"
-      ]
-    }
-  ],
-  volunteers: [
-    {
-      role: "Registration & Coordination",
-      names: ["Eugene Liew", "Calvin Zheng", "Mission Staff"]
-    },
-    {
-      role: "Track Lot Marshals",
-      names: ["Ross Dunnet", "Marc Brito", "Justin Ng"]
-    },
-    {
-      role: "Tech Inspections & Support",
-      names: ["Nathan Tong", "Marc Brito"]
-    },
-    {
-      role: "Follow Lead Instructors",
-      names: ["Jessie Pashak", "Nathan Tong", "Marc Brito"]
-    },
-    {
-      role: "Medical",
-      names: ["Victor Quintoro", "Justin Ng"]
-    },
-    {
-      role: "Food & Beverage",
-      names: ["Colin Yu", "Justin Ng"]
-    }
-  ]
-};
-
 let scheduleRefreshTimerId = null;
 
 function getStoredValue(key) {
@@ -451,8 +163,47 @@ function setImage(id, image) {
     return;
   }
 
+  if (!image?.src) {
+    element.removeAttribute("src");
+    element.alt = image?.alt || "";
+    return;
+  }
+
   element.src = image.src;
-  element.alt = image.alt;
+  element.alt = image.alt || "";
+}
+
+function renderHeroBorderText(text) {
+  const tracks = document.querySelectorAll(".hero-marquee-track");
+  const normalizedText = String(text || "").trim();
+
+  if (!tracks.length || !normalizedText) {
+    return;
+  }
+
+  const repeatedText = Array(3).fill(normalizedText).join(" ");
+  const copy = `<span class="hero-marquee-copy">${escapeHtml(repeatedText)}</span>`;
+
+  tracks.forEach((track) => {
+    track.innerHTML = `${copy}${copy}`;
+  });
+}
+
+function renderPromoLink(promoLink) {
+  const container = document.getElementById("event-promo");
+
+  if (!container) {
+    return;
+  }
+
+  if (!promoLink?.label || !promoLink?.url) {
+    container.hidden = true;
+    container.innerHTML = "";
+    return;
+  }
+
+  container.hidden = false;
+  container.innerHTML = `<a target="_blank" rel="noreferrer" href="${escapeHtml(promoLink.url)}">${escapeHtml(promoLink.label)}</a>`;
 }
 
 function setupOverviewAudio(audioConfig) {
@@ -514,11 +265,11 @@ function setupOverviewAudio(audioConfig) {
   });
 }
 
-function getChecklistStorageKey(section, item) {
-  return `trackday2026:bring:${section}:${item}`;
+function getChecklistStorageKey(storagePrefix, section, item) {
+  return `${storagePrefix}:bring:${section}:${item}`;
 }
 
-function renderChecklist(id, section, items) {
+function renderChecklist(id, section, items, storagePrefix) {
   const container = document.getElementById(id);
 
   if (!container) {
@@ -528,7 +279,8 @@ function renderChecklist(id, section, items) {
   container.innerHTML = items
     .map((item, index) => {
       const checkboxId = `${section}-item-${index}`;
-      const isChecked = getStoredValue(getChecklistStorageKey(section, item)) === "true";
+      const storageKey = getChecklistStorageKey(storagePrefix, section, item);
+      const isChecked = getStoredValue(storageKey) === "true";
 
       return `
         <li class="checklist-item">
@@ -537,7 +289,7 @@ function renderChecklist(id, section, items) {
               class="checklist-checkbox"
               type="checkbox"
               id="${checkboxId}"
-              data-storage-key="${getChecklistStorageKey(section, item)}"
+              data-storage-key="${storageKey}"
               ${isChecked ? "checked" : ""}
             >
             <span>${item}</span>
@@ -815,11 +567,17 @@ function getTrackState(items, eventDate, now = new Date()) {
   }
 
   if (currentIndex >= 0) {
+    const currentItem = items[currentIndex];
+    const currentStartTime = parseScheduleTime(eventDate, currentItem.time);
+    const currentEndTime = getScheduleItemEndTime(currentItem, currentIndex, items, eventDate);
+
     return {
       mode: "live",
       trackState: lastMarkerTitle.toLowerCase().includes("hot") ? "hot" : "cold",
       currentIndex,
-      currentItem: items[currentIndex]
+      currentItem,
+      currentStartTime,
+      currentEndTime
     };
   }
 
@@ -830,9 +588,14 @@ function getTrackState(items, eventDate, now = new Date()) {
   };
 }
 
-function formatCountdown(targetTime) {
-  const millisecondsRemaining = targetTime.getTime() - Date.now();
-  const totalSeconds = Math.max(0, Math.floor(millisecondsRemaining / 1000));
+function getRemainingSeconds(targetTime, now = new Date()) {
+  const millisecondsRemaining = targetTime.getTime() - now.getTime();
+
+  return Math.max(0, Math.ceil(millisecondsRemaining / 1000));
+}
+
+function formatCountdown(targetTime, now = new Date()) {
+  const totalSeconds = getRemainingSeconds(targetTime, now);
   const days = Math.floor(totalSeconds / 86400);
   const hours = Math.floor((totalSeconds % 86400) / 3600);
   const minutes = Math.floor((totalSeconds % 3600) / 60);
@@ -841,16 +604,45 @@ function formatCountdown(targetTime) {
   return `${String(days).padStart(2, "0")}D:${String(hours).padStart(2, "0")}H:${String(minutes).padStart(2, "0")}M:${String(seconds).padStart(2, "0")}S`;
 }
 
+function formatSessionCountdown(targetTime, now = new Date()) {
+  const totalSeconds = getRemainingSeconds(targetTime, now);
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+  const minuteSecondText = `${String(minutes).padStart(2, "0")}M${String(seconds).padStart(2, "0")}S`;
+
+  if (hours < 1) {
+    return minuteSecondText;
+  }
+
+  return `${hours}H${minuteSecondText}`;
+}
+
+function getRemainingRatio(startTime, endTime, now = new Date()) {
+  const duration = endTime?.getTime() - startTime?.getTime();
+
+  if (!Number.isFinite(duration) || duration <= 0) {
+    return null;
+  }
+
+  const remaining = endTime.getTime() - now.getTime();
+  return Math.max(0, Math.min(1, remaining / duration));
+}
+
 function getStatusPresentation(content) {
   const eventStartTime = getEventStartTime(content.schedule, content.date);
   const now = new Date();
 
   if (eventStartTime && now < eventStartTime) {
+    const progressStartTime = new Date(eventStartTime.getTime() - 24 * 60 * 60 * 1000);
+
     return {
+      mode: "countdown",
       pill: "Event Soon",
       pillState: "upcoming",
-      primary: formatCountdown(eventStartTime),
-      secondary: "until event starts"
+      primary: formatCountdown(eventStartTime, now),
+      secondary: "until event starts",
+      progress: getRemainingRatio(progressStartTime, eventStartTime, now)
     };
   }
 
@@ -858,25 +650,38 @@ function getStatusPresentation(content) {
 
   if (state.mode === "countdown" && state.nextTime) {
     return {
+      mode: "countdown",
       pill: "Event Soon",
       pillState: "upcoming",
-      primary: formatCountdown(state.nextTime),
-      secondary: "until event starts"
+      primary: formatCountdown(state.nextTime, now),
+      secondary: "until event starts",
+      progress: getRemainingRatio(
+        new Date(state.nextTime.getTime() - 24 * 60 * 60 * 1000),
+        state.nextTime,
+        now
+      )
     };
   }
 
   if (state.mode === "live" && state.currentItem) {
     return {
+      mode: "live",
       pill: state.trackState === "hot" ? "Track Hot" : "Track Cold",
       pillState: state.trackState,
       primary: state.currentItem.title,
       secondary: getDisplayRange(state.currentItem),
-      group: state.currentItem.group || ""
+      group: state.currentItem.group || "",
+      timer: state.currentEndTime ? formatSessionCountdown(state.currentEndTime, now) : "",
+      progress:
+        state.currentStartTime && state.currentEndTime
+          ? getRemainingRatio(state.currentStartTime, state.currentEndTime, now)
+          : null
     };
   }
 
   if (state.mode === "complete") {
     return {
+      mode: "complete",
       pill: "Track Cold",
       pillState: "cold",
       primary: "Event Complete",
@@ -887,6 +692,7 @@ function getStatusPresentation(content) {
   const upcomingItem = content.schedule.find((item) => item.type !== "marker");
 
   return {
+    mode: "between",
     pill: state.trackState === "hot" ? "Track Hot" : "Track Cold",
     pillState: state.trackState,
     primary: upcomingItem ? upcomingItem.title : "Awaiting Next Update",
@@ -907,7 +713,13 @@ function renderStatus(content) {
   }
 
   if (statusPrimary) {
-    statusPrimary.textContent = status.primary;
+    const countdownText = window.trackDayCountdownText;
+
+    if (countdownText && typeof countdownText.render === "function") {
+      countdownText.render(status.primary, status.mode === "countdown");
+    } else {
+      statusPrimary.textContent = status.primary;
+    }
   }
 
   if (statusSecondary) {
@@ -916,6 +728,14 @@ function renderStatus(content) {
 
   if (!statusStrip) {
     return;
+  }
+
+  statusStrip.dataset.mode = status.mode;
+
+  const statusEnhancement = window.trackDayStatusEnhancement;
+
+  if (statusEnhancement && typeof statusEnhancement.render === "function") {
+    statusEnhancement.render(status);
   }
 
   const currentGroup = status.pillState === "hot" && status.group ? status.group : "";
@@ -934,6 +754,7 @@ function renderStatus(content) {
         statusStrip.dataset.group = currentGroup;
         statusStrip.style.setProperty("--group-color", color);
         statusStrip.style.setProperty("--group-color-soft", `rgba(${red}, ${green}, ${blue}, 0.16)`);
+        statusStrip.style.setProperty("--group-color-quarter", `rgba(${red}, ${green}, ${blue}, 0.25)`);
         statusStrip.style.setProperty("--group-color-tint", `rgba(${red}, ${green}, ${blue}, 0.10)`);
         return;
       }
@@ -943,6 +764,7 @@ function renderStatus(content) {
   delete statusStrip.dataset.group;
   statusStrip.style.removeProperty("--group-color");
   statusStrip.style.removeProperty("--group-color-soft");
+  statusStrip.style.removeProperty("--group-color-quarter");
   statusStrip.style.removeProperty("--group-color-tint");
 }
 
@@ -1031,7 +853,7 @@ function setupScheduleRefresh(content) {
 function renderGroups(items, groupColors) {
   const container = document.getElementById("group-list");
 
-  if (!container) {
+  if (!container || !Array.isArray(items)) {
     return;
   }
 
@@ -1056,6 +878,36 @@ function renderGroups(items, groupColors) {
       `
     )
     .join("");
+}
+
+function renderLessons(items) {
+  const container = document.getElementById("lesson-list");
+
+  if (!container || !Array.isArray(items)) {
+    return;
+  }
+
+  container.innerHTML = `
+    <article class="lesson-card" aria-label="Driving lessons">
+      ${items
+        .map(
+          (item, index) => `
+            <div class="lesson-row">
+              <div class="lesson-number" aria-hidden="true">${index + 1}</div>
+              <div class="lesson-body">
+                <img
+                  class="lesson-image"
+                  src="${escapeHtml(item.imageSrc)}"
+                  alt="${escapeHtml(item.imageAlt || "")}"
+                />
+                <h3 class="lesson-title">${escapeHtml(item.title)}</h3>
+              </div>
+            </div>
+          `
+        )
+        .join("")}
+    </article>
+  `;
 }
 
 function renderVolunteers(items) {
@@ -1397,9 +1249,12 @@ function renderTrackInfo(trackInfo) {
 }
 
 function renderPage(content) {
+  const storagePrefix = content.storageKey || content.slug || "trackdays:event";
+
   setText("brand-title", content.brandTitle);
   setText("event-title", content.title);
   setImage("overview-image", content.overviewImage);
+  renderHeroBorderText(content.heroBorderText);
   setText("event-date", content.date);
   setText("event-time", content.time);
   setText("event-location-name", content.locationName);
@@ -1407,12 +1262,14 @@ function renderPage(content) {
   setText("event-location-address", content.address);
   setLink("event-location-link", content.locationUrl);
   setText("event-summary", content.summary);
+  renderPromoLink(content.promoLink);
   setupOverviewAudio(content.overviewAudio);
   renderStatus(content);
   renderTrackInfo(content.trackInfo);
-  renderChecklist("required-items", "required", content.requiredItems);
-  renderChecklist("recommended-items", "recommended", content.recommendedItems);
+  renderChecklist("required-items", "required", content.requiredItems, storagePrefix);
+  renderChecklist("recommended-items", "recommended", content.recommendedItems, storagePrefix);
   renderFaqItems(content.faqItems);
+  renderLessons(content.lessons);
   renderGroups(content.groups, content.groupColors);
   renderVolunteers(content.volunteers);
   setupScheduleRefresh(content);
@@ -1420,6 +1277,13 @@ function renderPage(content) {
   setupViewportOffsets();
   setupSectionNavHighlight();
   updateTopChromeHeight();
+  document.dispatchEvent(new CustomEvent("trackday:rendered"));
+}
+
+const eventContent = window.trackDayEventContent;
+
+if (!eventContent) {
+  throw new Error("Track day event content was not loaded.");
 }
 
 renderPage(eventContent);
