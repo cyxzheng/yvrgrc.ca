@@ -32,4 +32,6 @@ function createSectionHeadingMarquees() {
   });
 }
 
-createSectionHeadingMarquees();
+document.addEventListener("trackday:rendered", createSectionHeadingMarquees, {
+  once: true
+});
