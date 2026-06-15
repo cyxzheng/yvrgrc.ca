@@ -76,7 +76,10 @@ window.trackDayEventContent = {
         },
         media: {
           title: "Mission Raceway track layout",
-          imageSrc: "assets/images/trackmap.jpeg"
+          imageSrc: "assets/images/trackmap.jpeg",
+          meta: "Opens the Mission track map PDF in a new tab",
+          pdfUrl: "assets/docs/MIssionMap_June15.pdf",
+          pdfLabel: "Open Mission track map PDF"
         },
         videos: [
           {
