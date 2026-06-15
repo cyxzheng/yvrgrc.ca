@@ -7,7 +7,10 @@ Static GitHub Pages site for `https://yvrgrc.ca/`.
 This repo is the canonical source for the YVRGRC website. It currently hosts a simple root landing page plus standalone static sections:
 
 - `/` - simple YVRGRC landing page
-- `/trackday2026/` - Track Day 2026 event page
+- `/trackdays/` - Track days index
+- `/trackdays/2026/jun15/` - Track Day 2026 June 15 event page
+- `/trackdays/2026/mar13/` - Track Day 2026 March 13 event page
+- `/trackday2026/` - legacy redirect to the March 13, 2026 event page
 - `/announcements/` - club announcements
 
 The custom domain is configured by `CNAME` and should remain:
@@ -23,11 +26,17 @@ The site is intentionally plain HTML, CSS, and vanilla JavaScript with no build 
 ```text
 index.html
 CNAME
-trackday2026/
+trackdays/
   index.html
-  styles.css
-  script.js
-  assets/
+  shared/
+    app.js
+    styles.css
+    assets/
+  2026/
+    mar13/
+      index.html
+      content.js
+      assets/
 announcements/
   index.html
   say-phin-lim.html
@@ -38,17 +47,22 @@ announcements/
 ## Public URLs
 
 - `https://yvrgrc.ca/`
-- `https://yvrgrc.ca/trackday2026/`
+- `https://yvrgrc.ca/trackdays/`
+- `https://yvrgrc.ca/trackdays/2026/jun15/`
+- `https://yvrgrc.ca/trackdays/2026/mar13/`
+- `https://yvrgrc.ca/trackday2026/` - legacy redirect
 - `https://yvrgrc.ca/announcements/`
 - `https://yvrgrc.ca/announcements/say-phin-lim.html`
 
 ## Track Day Content
 
-Event content stays centralized in [`trackday2026/script.js`](/Users/calvinzheng/Documents/Projects/Code/trackday2026/trackday2026/script.js), inside the `eventContent` object.
+Track day event pages live under `trackdays/<year>/<short-month><day>/`, using lowercase short month names like `mar13`, `may13`, and `sep7`.
 
-For thumbnail audio, edit `eventContent.overviewAudio`:
+Editable event content stays centralized in each event's `content.js`, inside `window.trackDayEventContent`.
 
-- Set `src` to your audio file path inside `trackday2026/assets/` (for example `assets/audio/theme.mp3`).
+For thumbnail audio, edit `window.trackDayEventContent.overviewAudio`:
+
+- Set `src` to your audio file path inside the event's `assets/` directory (for example `assets/audio/theme.mp3`).
 - Keep `src: ""` to hide the unmute button.
 - `buttonLabels`, `loop`, and `initialVolume` are optional.
 

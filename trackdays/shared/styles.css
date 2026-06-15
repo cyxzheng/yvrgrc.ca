@@ -1,20 +1,20 @@
 @font-face {
   font-family: "PP Formula Extended";
-  src: url("../public/assets/fonts/PPFormula-ExtendedBold.woff2") format("woff2");
+  src: url("/public/assets/fonts/PPFormula-ExtendedBold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "PP Formula Medium";
-  src: url("../public/assets/fonts/PPFormula-Medium.woff2") format("woff2");
+  src: url("/public/assets/fonts/PPFormula-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "PP Formula Extra";
-  src: url("../public/assets/fonts/PPFormula-Extrabold.woff2") format("woff2");
+  src: url("/public/assets/fonts/PPFormula-Extrabold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
 }
@@ -204,6 +204,12 @@ a {
   font-size: var(--type-h3-size);
   line-height: var(--type-heading-line-height);
   font-family: "PP Formula Extended", "PP Formula Medium", sans-serif;
+}
+
+.status-primary,
+.status-timer {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
 }
 
 .status-secondary {
@@ -508,7 +514,7 @@ p {
 
 .section-stack {
   display: grid;
-  gap: 48px;
+  gap: 40px;
 }
 
 .participant-content[hidden] {
