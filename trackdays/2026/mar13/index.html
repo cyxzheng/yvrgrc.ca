@@ -3,8 +3,13 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>YVRGRC Track Day 2026</title>
+        <title>YVRGRC Track Day - March 13, 2026</title>
         <link rel="stylesheet" href="/trackdays/shared/styles.css" />
+        <link
+            rel="stylesheet"
+            href="/trackdays/shared/vendor/slot-text/style.css"
+        />
+        <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
         <a class="skip-link" href="#main-content">Skip to content</a>
@@ -24,14 +29,27 @@
                     <p id="status-pill" class="status-pill">[Status]</p>
                 </div>
                 <div class="status-strip" aria-live="polite">
-                    <p class="status-kicker">Current Status</p>
                     <div class="status-copy">
-                        <p id="status-primary" class="status-primary">
-                            [Status]
-                        </p>
-                        <p id="status-secondary" class="status-secondary">
-                            [Status detail]
-                        </p>
+                        <div class="status-main">
+                            <p class="status-kicker">Current Status</p>
+                            <p id="status-primary" class="status-primary">
+                                [Status]
+                            </p>
+                        </div>
+                        <div class="status-timing">
+                            <p id="status-secondary" class="status-secondary">
+                                [Status detail]
+                            </p>
+                            <p
+                                id="status-timer"
+                                class="status-timer"
+                                aria-live="off"
+                                hidden
+                            ></p>
+                        </div>
+                    </div>
+                    <div class="status-progress" aria-hidden="true">
+                        <div class="status-progress-value"></div>
                     </div>
                 </div>
             </div>
@@ -60,7 +78,19 @@
             </div>
             <section id="overview" class="section hero-section">
                 <div class="hero-card">
-                    <div class="overview-media">
+                    <div class="overview-media hero-marquee-frame">
+                        <div
+                            class="hero-marquee hero-marquee-top"
+                            aria-hidden="true"
+                        >
+                            <div class="hero-marquee-track"></div>
+                        </div>
+                        <div
+                            class="hero-marquee hero-marquee-bottom"
+                            aria-hidden="true"
+                        >
+                            <div class="hero-marquee-track"></div>
+                        </div>
                         <img id="overview-image" src="" alt="" />
                         <button
                             id="overview-audio-toggle"
@@ -256,6 +286,10 @@
 
         <script src="https://unpkg.com/lucide@latest"></script>
         <script src="content.js"></script>
-        <script src="/trackdays/shared/app.js"></script>
+        <script
+            type="module"
+            src="/trackdays/shared/countdown-slot-text.js"
+        ></script>
+        <script src="section-heading-marquee.js"></script>
     </body>
 </html>
