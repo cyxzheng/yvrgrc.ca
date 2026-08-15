@@ -16,6 +16,8 @@ window.trackDayEventContent = {
     src: "assets/images/cover.gif",
     alt: "Track day event cover image"
   },
+  heroBorderText:
+    "MARCH 13 2026 / HOSTED BY YVRGRC / IN PARTNERSHIP WITH TOYOTA CANADA AND OPENROAD AUTO GROUP /",
   overviewAudio: {
     src: "",
     buttonLabels: {
